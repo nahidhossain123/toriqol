@@ -1,7 +1,31 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Roboto, Iceland, Atomic_Age } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+
+// 1. Configure Roboto
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-roboto',
+  display: 'swap',
+});
+
+// 2. Configure Iceland
+const iceland = Iceland({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-iceland',
+  display: 'swap',
+});
+
+// 3. Configure Atomic Age
+const atomicAge = Atomic_Age({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-atomic-age',
+  display: 'swap',
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,12 +50,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} ${iceland.variable} ${atomicAge.variable} antialiased`}
       >
         <Header />
         <div className=''>
-          <div className="h-full bg-black w-px fixed top-0 left-20" />
-          <div className="h-full bg-black w-px fixed top-0 right-20" />
+          <div className="h-full bg-primary w-px fixed top-0 left-20" />
+          <div className="h-full bg-primary w-px fixed top-0 right-20" />
           {children}
         </div>
       </body>

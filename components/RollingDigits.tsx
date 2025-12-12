@@ -26,7 +26,7 @@ const RollingDigits = () => {
     return (
         <div className="flex text-white items-center justify-center overflow-hidden relative">
             {/* Outer wrapper controls cropping */}
-            <div className='flex'>
+            <div className='flex font-iceland'>
                 <div className="w-12 h-20 text-center relative overflow-hidden">
                     <div ref={hundredRef} className="absolute w-full h-full text-7xl font-extrabold translate-y-0">
                         0 1

@@ -3,14 +3,21 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primaryColor: #EF3B39;
+  --secondaryColor: #231F20;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primaryColor);
+  --color-secondary: var(--secondaryColor);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-    --container-width: 1280px;
+  --font-iceland:var(--font-iceland);
+  --font-roboto:var(--font-roboto);
+  --font-atomic:var(--font-atomic-age);
+  --container-width: 1280px;
   --container-padding: 1rem;
 }
 
