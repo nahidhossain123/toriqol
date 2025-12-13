@@ -17,7 +17,7 @@ const Timezone = () => {
     const bstTime: string = new Intl.DateTimeFormat('en-US', options).format(newDate);
     console.log(bstTime);
     return (
-        <div className='bg-primary w-fit text-white px-2 space-y-3'>
+        <div className='bg-primary w-fit text-white px-1 space-y-3'>
             <div>
                 <span className='block text-center text-[10px] font-iceland'>LOCAL</span>
                 <span className='block text-center text-[10px] font-iceland'>TIME</span>
