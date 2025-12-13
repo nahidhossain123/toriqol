@@ -54,8 +54,8 @@ export default function RootLayout({
       >
         <Header />
         <div className=''>
-          <div className="h-full bg-primary w-px fixed top-0 left-20" />
-          <div className="h-full bg-primary w-px fixed top-0 right-20" />
+          <div className="h-full bg-primary w-px fixed top-0 left-12" />
+          <div className="h-full bg-primary w-px fixed top-0 right-12" />
           {children}
         </div>
       </body>
