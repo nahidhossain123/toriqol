@@ -1,9 +1,33 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 
 const Timezone = () => {
+    const [data, setDate] = useState(new Date)
+    const options: Intl.DateTimeFormatOptions = {
+        weekday: 'long',
+        month: 'short',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true,
+        timeZone: 'Asia/Dhaka',
+        timeZoneName: 'shortOffset'
+    };
+    const newDate: Date = new Date();
+    const bstTime: string = new Intl.DateTimeFormat('en-US', options).format(newDate);
+    console.log(bstTime);
     return (
-        <div>
-
+        <div className='bg-primary w-fit text-white px-2 space-y-3'>
+            <div>
+                <span className='block text-center text-[10px] font-iceland'>LOCAL</span>
+                <span className='block text-center text-[10px] font-iceland'>TIME</span>
+            </div>
+            <div>
+                <span className='block text-center text-2xl font-iceland text-[18px] leading-[18px]'>AM</span>
+                <span className='block text-center text-2xl font-iceland leading-6'>10</span>
+                <span className='block text-center text-2xl font-iceland leading-6'>10</span>
+            </div>
+            <span className='block text-center text-[10px] font-iceland'>GMT 6+</span>
         </div>
     )
 }

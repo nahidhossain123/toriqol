@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Roboto, Iceland, Atomic_Age } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Timezone from "@/components/Timezone";
 
 // 1. Configure Roboto
 const roboto = Roboto({
@@ -53,6 +54,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} ${iceland.variable} ${atomicAge.variable} antialiased`}
       >
         <Header />
+        <div className="fixed flex items-center h-full">
+          <Timezone />
+        </div>
         <div className=''>
           <div className="h-full bg-primary w-px fixed top-0 left-12" />
           <div className="h-full bg-primary w-px fixed top-0 right-12" />
