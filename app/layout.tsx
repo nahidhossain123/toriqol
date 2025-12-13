@@ -3,6 +3,8 @@ import { Geist, Geist_Mono, Roboto, Iceland, Atomic_Age } from "next/font/google
 import "./globals.css";
 import Header from "@/components/Header";
 import Timezone from "@/components/Timezone";
+import Location from "@/components/Location";
+import Nav from "@/components/Nav";
 
 // 1. Configure Roboto
 const roboto = Roboto({
@@ -56,6 +58,12 @@ export default function RootLayout({
         <Header />
         <div className="fixed flex items-center h-full">
           <Timezone />
+        </div>
+        <div className="fixed bg-white z-10 right-5 bottom-20">
+          <Location />
+        </div>
+        <div className="fixed top-40 right-0 h-1/2">
+          <Nav />
         </div>
         <div className=''>
           <div className="h-full bg-primary w-px fixed top-0 left-12" />

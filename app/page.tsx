@@ -38,7 +38,7 @@ export default function Home() {
   }, []);
   return (
     <div className="">
-      <div className="fixed " ref={helloRef}>
+      <div className="fixed z-10" ref={helloRef}>
         <Hello />
       </div>
       <div ref={bannerRef} className="translate-y-[100px] opacity-0">
