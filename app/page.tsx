@@ -23,9 +23,9 @@ export default function Home() {
   }, []);
   return (
     <div className="">
-      {/* <div className="fixed z-10" ref={helloRef}>
+      <div className="fixed z-10" ref={helloRef}>
         <Hello />
-      </div> */}
+      </div>
       <div ref={bannerRef} className="">
         <Banner />
       </div>

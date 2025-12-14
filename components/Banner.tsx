@@ -165,19 +165,17 @@ const Banner = () => {
 
             scrollTl.fromTo(
                 section1Ref.current,
-                { yPercent: 100, opacity: 0 },
+                { yPercent: 100 },
                 {
                     yPercent: 4.5,
-                    opacity: 1,
                     duration: 1,
                 }
             )
                 .fromTo(
                     section2Ref.current,
-                    { yPercent: 100, opacity: 0 },
+                    { yPercent: 100 },
                     {
                         yPercent: 28.2,
-                        opacity: 1,
                         duration: 1,
                     }
                 )
@@ -186,6 +184,19 @@ const Banner = () => {
 
         return () => ctx.revert()
     }, [])
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.to(".marquee-track", {
+                xPercent: -50,
+                repeat: -1,
+                duration: 5,
+                ease: "linear",
+            });
+        }, section2Ref);
+
+        return () => ctx.revert();
+    }, []);
 
 
     return (
@@ -289,9 +300,9 @@ const Banner = () => {
             {/* Section 2 */}
             <div
                 ref={section2Ref}
-                className="w-[28.33%] absolute bottom-0 top-0 right-0 bg-[#F1F2F2] mr-12 flex"
+                className="w-[28.33%] absolute bottom-0 top-0 right-0 bg-[#F1F2F2] mr-12 overflow-hidden"
             >
-                <div ref={marqueeRef} className='flex gap-2'>
+                <div ref={marqueeRef} className='marquee-track flex gap-2 mt-60'>
                     <Image src={LogoGray} alt="Logo Gray" width={433} height={131} className="mt-10 ml-5" />
                     <Image src={LogoGray} alt="Logo Gray" width={433} height={131} className="mt-10 ml-5" />
                 </div>
