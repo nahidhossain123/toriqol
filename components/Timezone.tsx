@@ -26,7 +26,7 @@ const Timezone = () => {
                 xPercent: -100,
                 opacity: 0,
                 duration: 0.5,
-                delay: 12,
+                delay: 11,
             },);
     }, []);
     return (
