@@ -3,9 +3,9 @@ import MarqueeTimeline from './MarqueeTimeline';
 import MarqueeLogo from './assets/logo-marquee.svg';
 import Image from 'next/image';
 
-const Portfolios = () => {
+const MyOverview = () => {
     return (
-        <div className='relative h-screen'>
+        <div className='relative h-[80vh]'>
             <div className='absolute w-full bg-black overflow-hidden flex py-2 z-30'>
                 <MarqueeTimeline>
                     <Image src={MarqueeLogo} alt="Logo Gray" width={116} height={24} />
@@ -39,7 +39,7 @@ const Portfolios = () => {
 
                 </MarqueeTimeline>
             </div>
-            <div className="grid grid-cols-[1fr_2fr_3fr_2fr] grid-rows-[1fr_4fr] h-[80%] w-full gap-6 p-4 px-12">
+            <div className="grid grid-cols-[1fr_2fr_3fr_2fr] grid-rows-[1fr_4fr] h-full w-full gap-6 p-4 px-12">
                 <div className={` bg-[#E6E7E8]`}>
 
                 </div>
@@ -109,4 +109,4 @@ const Portfolios = () => {
     )
 }
 
-export default Portfolios
+export default MyOverview

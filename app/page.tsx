@@ -1,8 +1,8 @@
 'use client'
 import Banner from "@/components/Banner";
 import Hello from "@/components/Hello";
-import Portfolios from "@/components/Portfolios";
-import RollingDigits from "@/components/RollingDigits";
+import MyOverview from "@/components/MyOverview";
+import WorkTogether from "@/components/WorkTogether";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 
@@ -31,7 +31,10 @@ export default function Home() {
         <Banner />
       </div>
       <div className="">
-        <Portfolios />
+        <MyOverview />
+      </div>
+      <div className="">
+        <WorkTogether />
       </div>
     </div>
   );
