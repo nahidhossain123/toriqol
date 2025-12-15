@@ -7,6 +7,8 @@ import ShortLogo from './assets/short-logo.svg'
 import LogoGray from './assets/logo-gray.svg'
 import Image from 'next/image';
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useGSAP } from '@gsap/react';
+import MarqueeTimeline from './MarqueeTimeline';
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -16,83 +18,6 @@ const Banner = () => {
     const section2Ref = useRef(null)
     const lineRef = useRef<HTMLDivElement>(null);
     const logoRef = useRef<HTMLDivElement>(null);
-    const marqueeRef = useRef(null);
-    // useEffect(() => {
-    //     const tl = gsap.timeline({ defaults: { ease: "power3.out", } });
-    //     tl.to(logoRef.current,
-    //         {
-    //             scale: 1.2,
-    //             opacity: 1,
-    //             duration: 1,
-    //             ease: 'power4.out',
-    //             delay: 3,
-    //         },
-    //     ).to('.line',
-    //         {
-    //             width: '100%',
-    //             duration: 1.5,
-    //             ease: 'power4.inOut',
-    //         },
-
-    //     ).to(logoRef.current,
-    //         {
-    //             yPercent: 200,
-    //             duration: 2,
-    //             ease: 'power4.inOut',
-    //         },
-    //         '<'
-    //     )
-    //         .to('.content', {
-    //             yPercent: -100,
-    //             duration: 1.5,
-    //             ease: 'power4.inOut',
-    //         }).fromTo('.content-bg', {
-    //             yPercent: 100,
-    //             duration: 1.5,
-    //             ease: 'power4.inOut',
-    //         },
-    //             {
-    //                 yPercent: 0,
-    //                 duration: 1.5,
-    //                 ease: "power4.inOut",
-    //             }
-    //         ).to('.content-bg', {
-    //             yPercent: -100,
-    //             duration: 1.5,
-    //             ease: 'power4.inOut',
-    //         });
-
-    //     const tl = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: containerRef.current,
-    //             start: "top top",
-    //             end: "+=200%", // controls total pinned scroll length
-    //             scrub: true,
-    //             pin: true,
-    //             anticipatePin: 1,
-    //         },
-    //     })
-
-    //     tl
-    //         // Section 1 appears
-    //         .fromTo(
-    //             section1Ref.current,
-    //             { y: "100%", opacity: 0 },
-    //             { y: "0%", opacity: 1, duration: 1 }
-    //         )
-
-    //         // Section 2 appears on top
-    //         .fromTo(
-    //             section2Ref.current,
-    //             { y: "100%", opacity: 0 },
-    //             { y: "0%", opacity: 1, duration: 1 }
-    //         )
-
-    //     return () => {
-    //         ScrollTrigger.killAll()
-    //     }
-
-    // }, []);
 
     useEffect(() => {
         // GSAP CONTEXT (React-safe)
@@ -184,20 +109,6 @@ const Banner = () => {
 
         return () => ctx.revert()
     }, [])
-
-    useEffect(() => {
-        const ctx = gsap.context(() => {
-            gsap.to(".marquee-track", {
-                xPercent: -50,
-                repeat: -1,
-                duration: 5,
-                ease: "linear",
-            });
-        }, section2Ref);
-
-        return () => ctx.revert();
-    }, []);
-
 
     return (
         <section ref={bannerRef} className='min-h-screen w-full pt-10'>
@@ -296,16 +207,16 @@ const Banner = () => {
                     <span>I will create techpack for your clothing brand.</span>
                 </h2>
             </div>
-
-            {/* Section 2 */}
             <div
                 ref={section2Ref}
-                className="w-[28.33%] absolute bottom-0 top-0 right-0 bg-[#F1F2F2] mr-12 overflow-hidden"
+                className="w-[28.33%] absolute bottom-0 top-0 right-0 bg-[#F1F2F2] mr-12 overflow-hidden pt-60"
             >
-                <div ref={marqueeRef} className='marquee-track flex gap-2 mt-60'>
+                <MarqueeTimeline>
                     <Image src={LogoGray} alt="Logo Gray" width={433} height={131} className="mt-10 ml-5" />
                     <Image src={LogoGray} alt="Logo Gray" width={433} height={131} className="mt-10 ml-5" />
-                </div>
+                    <Image src={LogoGray} alt="Logo Gray" width={433} height={131} className="mt-10 ml-5" />
+                    <Image src={LogoGray} alt="Logo Gray" width={433} height={131} className="mt-10 ml-5" />
+                </MarqueeTimeline>
             </div>
         </section>
     )

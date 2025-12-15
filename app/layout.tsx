@@ -59,15 +59,15 @@ export default function RootLayout({
         <div className="fixed flex items-center h-full">
           <Timezone />
         </div>
-        <div className="fixed bg-white z-10 right-5 bottom-20">
+        <div className="fixed bg-white z-20 right-5 bottom-20">
           <Location />
         </div>
         <div className="fixed top-40 right-0 h-1/2">
           <Nav />
         </div>
         <div className=''>
-          <div className="h-full bg-primary w-px fixed top-0 left-12" />
-          <div className="h-full bg-primary w-px fixed top-0 right-12" />
+          <div className="h-full bg-primary w-px fixed top-0 left-12 z-10" />
+          <div className="h-full bg-primary w-px fixed top-0 right-12 z-10" />
           {children}
         </div>
       </body>

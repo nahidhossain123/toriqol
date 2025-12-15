@@ -1,6 +1,7 @@
 'use client'
 import Banner from "@/components/Banner";
 import Hello from "@/components/Hello";
+import Portfolios from "@/components/Portfolios";
 import RollingDigits from "@/components/RollingDigits";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
@@ -23,11 +24,14 @@ export default function Home() {
   }, []);
   return (
     <div className="">
-      <div className="fixed z-10" ref={helloRef}>
+      <div className="fixed z-40" ref={helloRef}>
         <Hello />
       </div>
       <div ref={bannerRef} className="">
         <Banner />
+      </div>
+      <div className="">
+        <Portfolios />
       </div>
     </div>
   );

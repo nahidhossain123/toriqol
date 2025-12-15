@@ -6,3 +6,8 @@ export interface ThemeButtonType{
      style?:string, 
      onButtonClick:()=>void
 }
+
+export interface MarqueeTimelineType{
+    children:ReactNode,
+    direction?:number
+}
