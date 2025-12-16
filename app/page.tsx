@@ -2,6 +2,7 @@
 import Banner from "@/components/Banner";
 import Hello from "@/components/Hello";
 import MyOverview from "@/components/MyOverview";
+import WorkSamples from "@/components/WorkSamples";
 import WorkTogether from "@/components/WorkTogether";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
@@ -35,6 +36,9 @@ export default function Home() {
       </div>
       <div className="">
         <WorkTogether />
+      </div>
+      <div className="">
+        <WorkSamples />
       </div>
     </div>
   );
