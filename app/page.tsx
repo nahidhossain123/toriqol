@@ -1,7 +1,10 @@
 'use client'
 import Banner from "@/components/Banner";
+import Features from "@/components/Features";
 import Hello from "@/components/Hello";
 import MyOverview from "@/components/MyOverview";
+import MyStatistics from "@/components/MyStatistics";
+import ReviewsRatings from "@/components/ReviewsRatings";
 import WorkSamples from "@/components/WorkSamples";
 import WorkTogether from "@/components/WorkTogether";
 import gsap from "gsap";
@@ -39,6 +42,15 @@ export default function Home() {
       </div>
       <div className="">
         <WorkSamples />
+      </div>
+      <div className="">
+        <MyStatistics />
+      </div>
+      <div className="">
+        <ReviewsRatings />
+      </div>
+      <div className="">
+        <Features />
       </div>
     </div>
   );
