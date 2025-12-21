@@ -1,6 +1,6 @@
 'use client'
 import Banner from "@/components/Banner";
-import Features from "@/components/Features";
+import Features from "@/components/Projects1";
 import Hello from "@/components/Hello";
 import MyOverview from "@/components/MyOverview";
 import MyStatistics from "@/components/MyStatistics";
@@ -9,6 +9,9 @@ import WorkSamples from "@/components/WorkSamples";
 import WorkTogether from "@/components/WorkTogether";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
+import Projects1 from "@/components/Projects1";
+import Projects2 from "@/components/Projects2";
+import Portfolio from "@/components/Portfolio";
 
 export default function Home() {
   const helloRef = useRef(null)
@@ -50,7 +53,13 @@ export default function Home() {
         <ReviewsRatings />
       </div>
       <div className="">
-        <Features />
+        <Projects1 />
+      </div>
+      <div className="">
+        <Projects2 />
+      </div>
+      <div className="">
+        <Portfolio />
       </div>
     </div>
   );

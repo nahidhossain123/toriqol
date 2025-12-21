@@ -29,7 +29,7 @@ const Location = () => {
             <div className='bg-black w-8 flex justify-center items-center'>
                 <Image src={ShortLogoWhite} alt='logo' width={13} height={17} />
             </div>
-            <p className='font-iceland text-[28px] leading-7'>Located in the Bangladesh</p>
+            <p className='font-iceland text-[28px] leading-7 px-2'>Located in the Bangladesh</p>
         </div>
     )
 }
