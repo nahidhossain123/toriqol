@@ -12,6 +12,9 @@ import { useEffect, useRef } from "react";
 import Projects1 from "@/components/Projects1";
 import Projects2 from "@/components/Projects2";
 import Portfolio from "@/components/Portfolio";
+import About from "@/components/About";
+import Contact from "@/components/Contact";
+import Download from "@/components/Download";
 
 export default function Home() {
   const helloRef = useRef(null)
@@ -60,6 +63,15 @@ export default function Home() {
       </div>
       <div className="">
         <Portfolio />
+      </div>
+      <div className="">
+        <About />
+      </div>
+      <div className="">
+        <Download />
+      </div>
+      <div className="">
+        <Contact />
       </div>
     </div>
   );
