@@ -5,7 +5,7 @@ import WhatsApp from './assets/whatsapp.svg'
 
 const Contact = () => {
     return (
-        <div className='mx-12 relative mt-10'>
+        <div className='mx-12 relative my-10'>
 
             <h3 className='h-fit absolute top-0 bottom-0 left-0 right-0 m-auto leading-12 text-[98px] font-iceland font-bold'>Let’s <span className='text-white'>create garments design tog</span>ether</h3>
 

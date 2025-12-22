@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Timezone from "@/components/Timezone";
 import Location from "@/components/Location";
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
 // 1. Configure Roboto
 const roboto = Roboto({
@@ -70,6 +71,7 @@ export default function RootLayout({
           <div className="h-full bg-primary w-px fixed top-0 right-12 z-10" />
           {children}
         </div>
+        <Footer />
       </body>
     </html>
   );
