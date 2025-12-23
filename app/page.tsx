@@ -15,6 +15,7 @@ import Portfolio from "@/components/Portfolio";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Download from "@/components/Download";
+import PhotoGallery from "@/components/PhotoGallery";
 
 export default function Home() {
   const helloRef = useRef(null)
@@ -72,6 +73,9 @@ export default function Home() {
       </div>
       <div className="">
         <Contact />
+      </div>
+      <div className="">
+        <PhotoGallery />
       </div>
     </div>
   );
