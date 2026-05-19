@@ -5,7 +5,7 @@ const Projects1 = () => {
     return (
         <div className='mx-12'>
             <h4 className='tracking-[0.35em] text-6xl text-white border-2 [-webkit-text-stroke:1px_black] leading-10 font-atomic'>PROJECTS</h4>
-            <div className='flex justify-center'>
+            <div className='flex justify-center mt-16'>
                 <Image src={SheinxLogo} alt="Logo Gray" width={325} height={40} />
             </div>
             <div className='my-20 space-y-5'>

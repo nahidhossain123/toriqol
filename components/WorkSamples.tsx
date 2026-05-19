@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import gsap from "gsap";
+import SectionHeaderH3 from "./SectionHeaderH3";
 
 const panels = [
     { title: 'AOP' },
@@ -12,7 +13,7 @@ const panels = [
 const WorkSamples = () => {
     const [active, setActive] = useState<number | null>(2);
     return (
-        <div className="h-screen overflow-hidden border-b border-primary">
+        <div className="h-screen overflow-hidden border-y border-primary">
             <div className="relative h-full w-full flex px-12">
                 {panels.map((item, index) => (
                     <div
@@ -35,7 +36,7 @@ const WorkSamples = () => {
                         </div>
                     </div>
                 ))}
-                <h3 className='absolute bottom-0 tracking-[0.55em] text-7xl leading-12 font-atomic'>WORK SAMPLES</h3>
+                <SectionHeaderH3 text="WORK SAMPLES" className='z-40' />
             </div>
         </div>
     )

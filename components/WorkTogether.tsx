@@ -12,8 +12,8 @@ import Image from 'next/image';
 
 const WorkTogether = () => {
     return (
-        <section className='h-screen mx-12'>
-            <div className='relative my-20'>
+        <section className='py-[50px] mx-12'>
+            <div className='relative my-[60px]'>
                 <Image src={DotShapes} alt="dot-shape" width={433} height={131} className="w-full h-full" />
                 <h3 className='absolute top-0 bottom-0 m-auto text-[138px] font-iceland font-bold'>Let’s work together.</h3>
             </div>

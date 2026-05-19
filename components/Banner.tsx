@@ -54,7 +54,7 @@ const Banner = () => {
                 '<'
             )
                 .to('.content', {
-                    yPercent: -100,
+                    yPercent: -88,
                     duration: 1.5,
                     ease: 'power4.inOut',
                 }).fromTo('.content-bg', {
@@ -92,7 +92,7 @@ const Banner = () => {
                 section1Ref.current,
                 { yPercent: 100 },
                 {
-                    yPercent: 4.5,
+                    yPercent: 0,
                     duration: 1,
                 }
             )
@@ -100,7 +100,7 @@ const Banner = () => {
                     section2Ref.current,
                     { yPercent: 100 },
                     {
-                        yPercent: 28.2,
+                        yPercent: 28,
                         duration: 1,
                     }
                 )
@@ -111,12 +111,12 @@ const Banner = () => {
     }, [])
 
     return (
-        <section ref={bannerRef} className='min-h-screen w-full pt-10'>
-            <div className='grid grid-rows-4 h-full'>
+        <section ref={bannerRef} className='h-screen w-full pt-10 overflow-hidden'>
+            <div className='flex-1 grid grid-rows-4 h-full'>
                 <div className='relative overflow-hidden'>
                     <div className='content px-12 h-full flex items-end translate-y-full'>
                         <div className='w-full flex justify-between'>
-                            <h2 className='text-9xl leading-22 font-atomic text-primary'>FREELANCE</h2>
+                            <h2 className='text-[9vw] leading-none font-atomic text-primary'>FREELANCE</h2>
                             <div className='flex gap-3'>
                                 <ul className='font-iceland text-sm leading-3'>
                                     <li>
@@ -138,10 +138,10 @@ const Banner = () => {
                 </div>
                 <div className='relative overflow-hidden'>
                     <div className='content px-12 h-full flex justify-between items-end text-primary translate-y-full'>
-                        <h2 className='text-9xl leading-22 font-atomic'>FASHION</h2>
+                        <h2 className='text-[9vw] leading-none font-atomic'>FASHION</h2>
                         <div className='-mr-2 space-y-2'>
                             <span className='inline-block font-bold font-atomic'>2015 to</span>
-                            <h2 className='text-9xl leading-22 font-atomic'>2026</h2>
+                            <h2 className='text-[9vw] leading-none font-atomic'>2026</h2>
                         </div>
                     </div>
                     <div ref={logoRef} className='absolute bottom-0 opacity-0 w-full flex justify-center'>
@@ -183,7 +183,7 @@ const Banner = () => {
                                     </ul>
                                 </div>
                             </div>
-                            <h2 className='text-9xl leading-22 font-atomic text-primary'>DESIGNER</h2>
+                            <h2 className='text-[9vw] leading-none font-atomic text-primary'>DESIGNER</h2>
                         </div>
                     </div>
                     <div className='content-bg absolute left-0 top-0 h-full w-full bg-secondary' />

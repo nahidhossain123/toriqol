@@ -67,8 +67,8 @@ export default function RootLayout({
           <Nav />
         </div>
         <div className=''>
-          <div className="h-full bg-primary w-px fixed top-0 left-12 z-10" />
-          <div className="h-full bg-primary w-px fixed top-0 right-12 z-10" />
+          <div className="h-full bg-primary w-px fixed top-0 left-12 z-40" />
+          <div className="h-full bg-primary w-px fixed top-0 right-12 z-40" />
           {children}
         </div>
         <Footer />

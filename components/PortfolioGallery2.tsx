@@ -1,12 +1,34 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const PortfolioGallery2 = () => {
+    const middleDivRef = React.useRef<HTMLDivElement>(null);
+    const spanRefs = React.useRef<(HTMLSpanElement | null)[]>([]);
+    const text = 'Sustainable Design';
+    useEffect(() => {
+        if (!middleDivRef.current) return;
+        const middleRect = middleDivRef.current?.getBoundingClientRect();
+        if (!middleRect) return;
+
+        spanRefs.current.forEach((span) => {
+            if (!span) return;
+            const rect = span.getBoundingClientRect();
+            const overlap = (rect.right > middleRect.right);
+            span.style.color = overlap ? "#000000" : "white";
+        });
+    }, []);
     return (
         <section className=' relative h-screen my-20'>
-            <h3 className='absolute top-0 tracking-[0.4em] text-8xl  font-atomic'><span className='text-white'>Sustainable Des</span><span className=''>ign</span></h3>
+            <h3 className='absolute top-0 tracking-[0.4em] text-8xl  font-atomic'>
+                {text.split("").map((char, i) => (
+                    <span
+                        key={i}
+                        ref={(el) => { spanRefs.current[i] = el }}
+                    >{char}</span>
+                ))}
+            </h3>
             <div className='grid grid-cols-4 grid-rows-[2fr_1fr] gap-4 h-full'>
                 <div className='bg-gray-500'></div>
-                <div className='bg-gray-300 col-span-2 flex items-end p-10'>
+                <div ref={middleDivRef} className='bg-gray-300 col-span-2 flex items-end p-10'>
                     <div className='font-iceland text-2xl'>
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
                         </p>
